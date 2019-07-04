@@ -34,3 +34,6 @@ Set-VM -VM $templateName -NumCpu $vm_cpu -MemoryGB $vm_memGB -Name $vm_name -Con
 
 # Power on the VM
 Start-VM -VM $vm_name
+
+# Configure DNS
+Invoke-VMScript -ScriptText 'mkdir c:\TESTING123' -VM $vm_name -GuestUser 'administrator' -GuestPassword 'VMware1!'
