@@ -7,16 +7,9 @@ Open PowerShell ISE, open `C:\e2e-home-lab-master\e2e-home-lab-master\OVF\copy-o
 
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_002.PNG)
 
-Edit configuration file with appropriate connection details to the lab
-```
-TODO
-```
+Open `cd .\e2e-home-lab-master\e2e-home-lab-master\powerShell\_e2e-lab-configuration-parameters.ps1` and populate the configuration parameters. Save the configuration file locally. Next time you download this git repo, copy your populated config file in place of the default config file. 
 
-Open PowerShell. Run the following scripts (in order):
-```
-cd .\e2e-home-lab-master\e2e-home-lab-master\powerShell
-```
-
+Run the E2E lab builder:
 ```
 .\e2e-build-lab.ps1
 ```
