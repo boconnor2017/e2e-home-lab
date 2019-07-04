@@ -13,7 +13,7 @@ $connect_esxi_pass = ''
 $deployto_datastore = 'e2e-esxi01-ds01'
 $deployto_network = 'VM Network'
 
-$ovf_source = 'c:\OVF\DMNCTRL\e2e-local-domain-controller-template.ovf'
+$ovf_source = 'C:\e2e-home-lab-master\e2e-home-lab-master\OVF\DMNCTRL\e2e-local-domain-controller-template.ovf'
 
 $vm_name = `e2e-dmnctl01`
 $vm_cpu = 2
