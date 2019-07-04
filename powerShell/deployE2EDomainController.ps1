@@ -4,11 +4,14 @@
 #                      is not supported by VMWare, any results of this script are solely for lab
 #                      environments. Use at your own risk. 
 # Date: June 2019
-
+#
+########################################################################################
+########################  ENTER INPUT PARAMS BEFORE RUNNING SCRIPT  ####################
+########################################################################################
 # Input Parameters
-$connect_esxi_host = '172.16.0.5'
+$connect_esxi_host = ''
 $connect_esxi_user = 'root'
-$connect_esxi_pass = 'BlizzanBandits123'
+$connect_esxi_pass = ''
 
 $deployto_datastore = 'e2e-esxi01-ds01'
 $deployto_network = 'VM Network'
@@ -19,7 +22,8 @@ $vm_name = 'e2e-dmnctl01'
 $vm_cpu = 2
 $vm_memGB = 8
 $vm_diskGB = 50
-
+########################################################################################
+########################################################################################
 # Initiate Connection to ESXi Host and Deploy the Template
 Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 Connect-VIServer -server $esxi_host -User $esxi_user -Password $esxi_pass
