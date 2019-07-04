@@ -6,9 +6,9 @@
 # Date: June 2019
 
 # Input Parameters
-$connect_esxi_host = ''
+$connect_esxi_host = '172.16.0.5'
 $connect_esxi_user = 'root'
-$connect_esxi_pass = ''
+$connect_esxi_pass = 'BlizzanBandits123'
 
 $deployto_datastore = 'e2e-esxi01-ds01'
 $deployto_network = 'VM Network'
@@ -30,7 +30,7 @@ $pos1 = ($ovf_source.LastIndexOf("\"))+1
 $pos2 = (($ovf_source.Length)-$pos1)-4
 $templateName = $ovf_source.Substring($pos1,$pos2);
 
-Set-VM -VM $templateName -NumCpu $vm_cpu -MemoryGB $vm_memGB -Name $vm_name
+Set-VM -VM $templateName -NumCpu $vm_cpu -MemoryGB $vm_memGB -Name $vm_name -Confirm $false
 
 # Power on the VM
 Start-VM -VM $vm_name
