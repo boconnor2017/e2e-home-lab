@@ -3,7 +3,7 @@ Download the repository (zip) to the Control Laptop on the `C:\` drive. Extract 
 
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_001.PNG)
 
-Copy the appropriate OVF templates to their respective folders
+Open PowerShell ISE, open `C:\e2e-home-lab-master\e2e-home-lab-master\OVF\copy-ova-to-repo.ps1`. Point `$src` parameters to their appropriate filesystems. Run the script to copy OVF templates (or copy them manually). 
 
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_002.PNG)
 
@@ -18,5 +18,7 @@ cd .\e2e-home-lab-master\e2e-home-lab-master\powerShell
 ```
 
 ```
-.\deployE2EDomainController.ps1
+.\e2e-build-lab.ps1
 ```
+
+For detailed lab setup instructions, see the wiki page. 
