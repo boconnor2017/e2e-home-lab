@@ -15,7 +15,7 @@ $deployto_network = 'VM Network'
 
 $ovf_source = 'C:\e2e-home-lab-master\e2e-home-lab-master\OVF\DMNCTRL\e2e-local-domain-controller-template.ovf'
 
-$vm_name = `e2e-dmnctl01`
+$vm_name = 'e2e-dmnctl01'
 $vm_cpu = 2
 $vm_memGB = 8
 $vm_diskGB = 50
