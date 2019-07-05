@@ -5,7 +5,7 @@ Download the repository (zip) to the Control Laptop on the `C:\` drive. Extract 
 
 Open PowerShell ISE, from the PowerShell console run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
-open `C:\e2e-home-lab-master\e2e-home-lab-master\OVF\copy-ova-to-repo.ps1`. Point `$src` parameters to their appropriate filesystems. Run the script to copy OVF templates (or copy them manually). 
+Open `C:\e2e-home-lab-master\e2e-home-lab-master\OVF\copy-ova-to-repo.ps1`. Point `$src` parameters to their appropriate filesystems. Run the script to copy OVF templates (or copy them manually). 
 
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_002.PNG)
 
