@@ -28,6 +28,7 @@ Start-Sleep -s 15
 Invoke-VMScript -ScriptText 'mkdir C:\pshell' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
 Invoke-VMScript -ScriptText 'Copy-Item -Path \\172.16.0.4\drop\* -Destination C:\pshell\' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
 Invoke-VMScript -ScriptText 'C:\pshell\set-DomainController-IP.ps1' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
+Invoke-VMScript -ScriptText 'C:\pshell\deplou-DomainController-DNS_AD.ps1' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
 
 
 
