@@ -21,4 +21,4 @@ To destroy the lab, Open and Run:
 destroy-e2e-lab.ps1
 ```
 
-For detailed lab setup instructions, see the wiki page. 
+For detailed prerequisites and lab setup instructions, see the wiki page. 
