@@ -11,9 +11,14 @@ Open `C:\e2e-home-lab-master\e2e-home-lab-master\OVF\copy-ova-to-repo.ps1`. Poin
 
 Open `cd .\e2e-home-lab-master\e2e-home-lab-master\powerShell\_e2e-lab-configuration-parameters.ps1` and populate the configuration parameters. Save the configuration file locally. Next time you download this git repo, copy your populated config file in place of the default config file. 
 
-Run the E2E lab builder:
+Open and Run the E2E lab builder:
 ```
-.\e2e-build-lab.ps1
+build-e2e-lab.ps1
+```
+
+To destroy the lab, Open and Run:
+```
+destroy-e2e-lab.ps1
 ```
 
 For detailed lab setup instructions, see the wiki page. 
