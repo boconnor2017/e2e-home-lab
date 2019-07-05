@@ -12,3 +12,5 @@ $dmnctl_vm_name = 'e2e-dmnctl01'
 $dmnctl_vm_cpu = 2
 $dmnctl_vm_memGB = 8
 $dmnctl_vm_diskGB = 50
+$dmnctl_vm_user = 'administrator'
+$dmnctl_vm_pass = ''
