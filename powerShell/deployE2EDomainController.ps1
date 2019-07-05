@@ -22,6 +22,12 @@ Set-VM -VM $templateName -NumCpu $dmnctl_vm_cpu -MemoryGB $dmnctl_vm_memGB -Name
 
 # Power on the VM
 Start-VM -VM $dmnctl_vm_name
+Start-Sleep -s 15
 
-# Configure DNS
-#Invoke-VMScript -ScriptText 'mkdir c:\TESTING123' -VM $vm_name -GuestUser 'administrator' -GuestPassword 'VMware1!'
+# Run DNS Configuraion Scripts
+Invoke-VMScript -ScriptText 'mkdir C:\pshell' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
+Invoke-VMScript -ScriptText 'Copy-Item -Path \\172.16.0.4\drop\* -Destination C:\pshell\' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
+Invoke-VMScript -ScriptText 'C:\pshell\set-DomainController-IP.ps1' -VM $dmnctl_vm_name -GuestUser $dmnctl_vm_user -GuestPassword $dmnctl_vm_pass
+
+
+
