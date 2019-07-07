@@ -20,7 +20,7 @@ Connect-VIServer -server $dmnctl_connect_esxi_host -User $dmnctl_connect_esxi_us
 # Deploy Domain Controller
 echo "Deploying Domain Controller for e2e.local"
 echo "   1. Deploying Windows OVF Template from source " $dmnctl_ovf_source
-Import-vApp -Source $dmnctl_ovf_source -VMHost $dmnctl_connect_esxi_host
+Import-vApp -Source $dmnctl_ovf_source -VMHost $dmnctl_connect_esxi_host -Datastore $dmnctl_deployto_datastore
    $pos1 = ($dmnctl_ovf_source.LastIndexOf("\"))+1
    $pos2 = (($dmnctl_ovf_source.Length)-$pos1)-4
    $templateName = $dmnctl_ovf_source.Substring($pos1,$pos2);
