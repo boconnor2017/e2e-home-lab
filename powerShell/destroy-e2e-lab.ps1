@@ -12,6 +12,14 @@
 Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 Connect-VIServer -server $dmnctl_connect_esxi_host -User $dmnctl_connect_esxi_user -Password $dmnctl_connect_esxi_pass
 
-# Shut Down Running VMs
-Stop-VM -VM $dmnctl_vm_name -Kill:$true
-Remove-VM - VM $dmnctl_vm_name -DeletePermanently:$true
+# Destroy Domain Controller
+Stop-VM -VM $dmnctl_vm_name -Kill:$true -Confirm:$false
+Remove-VM -VM $dmnctl_vm_name -DeletePermanently:$true -Confirm:$false
+
+# Initiate Connection to ESXi Host
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+Connect-VIServer -server $nesxi_connect_esxi_host -User $nesxi_connect_esxi_user -Password $nesxi_connect_esxi_pass
+
+# Destroy Domain Controller
+Stop-VM -VM $nesxi_vm_name -Kill:$true -Confirm:$false
+Remove-VM -VM $nesxi_vm_name -DeletePermanently:$true -Confirm:$false
