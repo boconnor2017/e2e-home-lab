@@ -1,3 +1,6 @@
+# Sets execution policy for control laptop (Run Manually)
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 # Copies OVA files from shared or local filesystem into the downloaded github repo
 
 $dmnctrl_src = 'C:\OVF\DMNCTRL\'
