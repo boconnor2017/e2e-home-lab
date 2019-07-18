@@ -9,4 +9,9 @@ mkdir /var/lib/vconnector
 cd /usr/local/e2e-home-lab
 echo **Initializing vconnector database
 vconnector-cli init
+echo **
+echo **
+echo ** Note: replace <esxi02.e2e.local> with the appropriate host name you want to enable
 echo **Run vconnector-cli -H esxi02.e2e.local -U root -P <password> add
+echo **Run vconnector-cli -H esxi02.e2e.local enable
+echo **Run vconnector-cli get
