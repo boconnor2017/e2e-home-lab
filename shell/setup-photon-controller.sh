@@ -9,5 +9,4 @@ mkdir /var/lib/vconnector
 cd /usr/local/e2e-home-lab
 echo **Initializing vconnector database
 vconnector-cli init
-echo **Run vconnector-cli -H esxi02.e2e.local -U root -P <password>
-#vconnector-cli -H esxi02.e2e.local -U root -P p4ssw0rd add
+echo **Run vconnector-cli -H esxi02.e2e.local -U root -P <password> add
