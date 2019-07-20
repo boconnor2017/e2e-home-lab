@@ -9,8 +9,6 @@ echo "################################################"
 echo ""
 echo ""
 echo ""
-echo "Copying local configuration files..."
-cp /usr/local/config/* /usr/local/e2e-home-lab/config
 echo "# Checking Config parameters for Domain Controller"
 echo "Deploy Domain Controller ESXi Host: $dmnctl_connect_esxi_host"
 echo "Connect Domain Controller ESXi Host with User: $dmnctl_connect_esxi_user"
