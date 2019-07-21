@@ -63,7 +63,7 @@ total 8
 
 Using favorite text editor, edit `e2e-lab.config`. Edit `local-resolv.conf`.
 
-Using favorite text editor, create a file called `build.sh` with the following script
+Navigate back to `/usr/local`. Using favorite text editor, create a file called `build.sh` with the following script
 ```
 # Cleanup repo
 rm -r e2e-home-lab/
