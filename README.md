@@ -8,12 +8,9 @@ Power On the VM
 Login with default username `root` and default password `changeme`. Create permanent password.
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_007.PNG)
 
-Navigate to `/usr/local` directory. Run `yum -y update` command
+Navigate to `/usr/local` directory. Start docker.
 ```
-root@photon-machine [ /usr/local ]# yum -y update
-...
-
-Complete!
+root@photon-machine [ /usr/local ]# systemctl start docker
 root@photon-machine [ /usr/local ]#
 ```
 
