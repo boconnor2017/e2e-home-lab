@@ -72,3 +72,28 @@ git clone https://github.com/boconnor2017/e2e-home-lab.git
 # Copy local configuration files to repo config directory
 cp /usr/local/config/* /usr/local/e2e-home-lab/config/
 ```
+
+Run `build.sh`
+```
+root@photon-machine [ /usr/local ]# sh build.sh
+Cloning into 'e2e-home-lab'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 327 (delta 6), reused 0 (delta 0), pack-reused 311
+Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
+Resolving deltas: 100% (128/128), done.
+```
+
+## If this is NOT your first time running this repo
+Run `build.sh`
+```
+root@photon-machine [ /usr/local ]# sh build.sh
+Cloning into 'e2e-home-lab'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 327 (delta 6), reused 0 (delta 0), pack-reused 311
+Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
+Resolving deltas: 100% (128/128), done.
+```
