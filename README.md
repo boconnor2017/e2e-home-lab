@@ -85,6 +85,23 @@ Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
 Resolving deltas: 100% (128/128), done.
 ```
 
+Navigate to `/usr/local/e2e-home-lab/shell` and run `setup-photon-controller.sh`
+```
+root@photon-machine [ /usr/local ]# cd e2e-home-lab/shell/
+root@photon-machine [ /usr/local/e2e-home-lab/shell ]# sh setup-photon-controller.sh
+
+
+
+################################################
+###   Starting deployment of E2E Home Lab    ###
+################################################
+
+
+
+# Checking Config parameters for Domain Controller
+...
+```
+
 ## If this is NOT your first time running this repo
 Run `build.sh`
 ```
@@ -96,4 +113,21 @@ remote: Compressing objects: 100% (16/16), done.
 remote: Total 327 (delta 6), reused 0 (delta 0), pack-reused 311
 Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
 Resolving deltas: 100% (128/128), done.
+```
+
+Navigate to `/usr/local/e2e-home-lab/shell` and run `setup-photon-controller.sh`
+```
+root@photon-machine [ /usr/local ]# cd e2e-home-lab/shell/
+root@photon-machine [ /usr/local/e2e-home-lab/shell ]# sh setup-photon-controller.sh
+
+
+
+################################################
+###   Starting deployment of E2E Home Lab    ###
+################################################
+
+
+
+# Checking Config parameters for Domain Controller
+...
 ```
