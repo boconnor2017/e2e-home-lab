@@ -32,9 +32,16 @@ echo "Nested ESXi OVF Source $nesxi_ovf_source"
 echo "Nested ESXi Naming Convention: $nesxi_namingConvention"
 echo ""
 echo ""
+echo "# Installing powershell"
+tdnf install powershell
 echo "# Installing Python"
 cd /usr/local/e2e-home-lab
 yum -y install python3 python-pip
+echo "# Installing pyvmomi packages"
+pip install pyvmomi
+pip install ndg-httpsclient
+pip install pyopenssl
+pip install pyasn1
 echo "# Installing vconnector"
 git clone https://github.com/dnaeon/py-vconnector.git
 cd py-vconnector
