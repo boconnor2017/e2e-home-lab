@@ -40,7 +40,6 @@ drwxr-xr-x  2 root root 4096 May 10 23:15 bin
 drwxr-x---  9 root root 4096 Jul 21 00:36 e2e-home-lab
 ```
 
-## If this is your first time using this repo
 Create `config` directory
 ```
 root@photon-machine [ /usr/local ]# mkdir config/
@@ -73,36 +72,6 @@ git clone https://github.com/boconnor2017/e2e-home-lab.git
 cp /usr/local/config/* /usr/local/e2e-home-lab/config/
 ```
 
-Run `build.sh`
-```
-root@photon-machine [ /usr/local ]# sh build.sh
-Cloning into 'e2e-home-lab'...
-remote: Enumerating objects: 16, done.
-remote: Counting objects: 100% (16/16), done.
-remote: Compressing objects: 100% (16/16), done.
-remote: Total 327 (delta 6), reused 0 (delta 0), pack-reused 311
-Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
-Resolving deltas: 100% (128/128), done.
-```
-
-Navigate to `/usr/local/e2e-home-lab/shell` and run `setup-photon-controller.sh`
-```
-root@photon-machine [ /usr/local ]# cd e2e-home-lab/shell/
-root@photon-machine [ /usr/local/e2e-home-lab/shell ]# sh setup-photon-controller.sh
-
-
-
-################################################
-###   Starting deployment of E2E Home Lab    ###
-################################################
-
-
-
-# Checking Config parameters for Domain Controller
-...
-```
-
-## If this is NOT your first time running this repo
 Run `build.sh`
 ```
 root@photon-machine [ /usr/local ]# sh build.sh
