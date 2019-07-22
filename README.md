@@ -67,24 +67,20 @@ rm -r e2e-home-lab/
 git clone https://github.com/boconnor2017/e2e-home-lab.git
 # Copy local configuration files to repo config directory
 cp /usr/local/config/* /usr/local/e2e-home-lab/config/
+cd /usr/local/e2e-home-lab/shell
+sh setup-photon-controller.sh
 ```
 
 Run `build.sh`
 ```
 root@photon-machine [ /usr/local ]# sh build.sh
 Cloning into 'e2e-home-lab'...
-remote: Enumerating objects: 16, done.
-remote: Counting objects: 100% (16/16), done.
-remote: Compressing objects: 100% (16/16), done.
-remote: Total 327 (delta 6), reused 0 (delta 0), pack-reused 311
-Receiving objects: 100% (327/327), 2.30 MiB | 1.69 MiB/s, done.
-Resolving deltas: 100% (128/128), done.
-```
-
-Navigate to `/usr/local/e2e-home-lab/shell` and run `setup-photon-controller.sh`
-```
-root@photon-machine [ /usr/local ]# cd e2e-home-lab/shell/
-root@photon-machine [ /usr/local/e2e-home-lab/shell ]# sh setup-photon-controller.sh
+remote: Enumerating objects: 35, done.
+remote: Counting objects: 100% (35/35), done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 346 (delta 17), reused 0 (delta 0), pack-reused 311
+Receiving objects: 100% (346/346), 2.30 MiB | 1.72 MiB/s, done.
+Resolving deltas: 100% (139/139), done.
 
 
 
