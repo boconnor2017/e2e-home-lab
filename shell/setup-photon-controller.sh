@@ -22,6 +22,7 @@ echo "Domain Controller Memory (GB): $dmnctl_vm_memGB"
 echo "Domain Controller Disk Size (GB): $dmnctl_vm_diskGB"
 echo "Domain Controller VM Guest Admin: $dmnctl_vm_user"
 echo "Domain Controller VM Guest Password: $dmnctl_vm_pass"
+echo ""
 echo "# Checking Config parameters for Nested ESXi Hosts"
 echo "Deploy Nested ESXi to ESXi Host: $nesxi_connect_esxi_host"
 echo "Connect Nested ESXi ESXi Host with User: $nesxi_connect_esxi_user"
@@ -31,19 +32,24 @@ echo "Deploy Nested ESXi to Network: $nesxi_deployto_network"
 echo "Nested ESXi OVF Source $nesxi_ovf_source"
 echo "Nested ESXi Naming Convention: $nesxi_namingConvention"
 echo ""
-echo ""
 echo "# Configuring local resolv.conf"
+yum -y install bindutils
 cp /usr/local/e2e-home-lab/config/local-resolv.conf /etc/resolv.conf
+nslookup localhost
+echo ""
 echo "# Installing powershell"
 tdnf install powershell
+echo ""
 echo "# Installing Python"
 cd /usr/local/e2e-home-lab
 yum -y install python3 python-pip
+echo ""
 echo "# Installing pyvmomi packages"
 pip install pyvmomi
 pip install ndg-httpsclient
 pip install pyopenssl
 pip install pyasn1
+echo ""
 echo "# Installing vconnector"
 git clone https://github.com/dnaeon/py-vconnector.git
 cd py-vconnector
