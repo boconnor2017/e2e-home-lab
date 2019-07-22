@@ -48,6 +48,16 @@ cd py-vconnector
 python3 setup.py install
 mkdir /var/lib/vconnector
 cd /usr/local/e2e-home-lab
-echo "# Initializing vconnector database"
-vconnector-cli init
+echo ""
+echo ""
+echo ""
+echo "# # # # # # # # # # # # # # # # # # # # # # # # # # # #"
+echo "# (MANUAL STEP) Initialize vconnector database"
+echo "# Run vconnector-cli init"
 echo "# Run vconnector-cli -H $dmnctl_connect_esxi_host -U $dmnctl_connect_esxi_user -P $dmnctl_connect_esxi_pass add"
+echo "# Run vconnector-cli -H $dmnctl_connect_esxi_host enable"
+echo "# # # # # # # # # # # # # # # # # # # # # # # # # # # #"
+echo ""
+echo ""
+echo ""
+echo "E2E Lab Build Completed!!"
