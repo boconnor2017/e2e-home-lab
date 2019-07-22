@@ -32,6 +32,8 @@ echo "Nested ESXi OVF Source $nesxi_ovf_source"
 echo "Nested ESXi Naming Convention: $nesxi_namingConvention"
 echo ""
 echo ""
+echo "# Configuring local resolv.conf"
+cp /usr/local/e2e-home-lab/config/local-resolv.conf /etc/resolv.conf
 echo "# Installing powershell"
 tdnf install powershell
 echo "# Installing Python"
