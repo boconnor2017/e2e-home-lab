@@ -97,3 +97,8 @@ root@photon-machine [ /usr/local/e2e-home-lab/shell ]# sh setup-photon-controlle
 # Checking Config parameters for Domain Controller
 ...
 ```
+
+At the completion of this step, you should have a fully functioning lab. 
+
+# Next Steps
+The purpose of this lab environment is to run E2E solutions. For details see [E2E Github Repository](https://github.com/boconnor2017/vmw-e2e).
