@@ -1,5 +1,5 @@
 # Getting Started
-Deploy a [Photon OS](https://vmware.github.io/photon/) VM to an ESXi Host (in this tutorial I'm using a virtual appliance: Version 3.0 build 26156e2 hardware version 11). 
+Deploy a [Photon OS](https://vmware.github.io/photon/) VM to an ESXi Host (in this tutorial I'm using a Version 3.0 virtual appliance with version 11 hardware). 
 
 ![](https://github.com/boconnor2017/e2e-home-lab/blob/master/img/getting_started_005.PNG)
 
