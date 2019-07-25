@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# NOTE: WORK IN PROGRESS
 
 from pyVim import connect
 import sys
