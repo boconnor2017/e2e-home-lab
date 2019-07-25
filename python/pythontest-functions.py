@@ -1,5 +1,6 @@
-# Functions
+#!/usr/bin/python
 
+# Functions
 def say_hello():
   print("Hello")
 
