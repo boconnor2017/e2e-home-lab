@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from pyVim import connect
 
 my_cluster = connect.ConnectNoSSL("172.16.0.6", 443, "root", "BlizzanBandits123")
