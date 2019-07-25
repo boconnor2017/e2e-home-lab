@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# These are some comments
+# I'm having way to much fun with this
 theTruth = True
 theLiars = False
 theStatement = "Python is pretty cool"
