@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Arrays
 arrayCounter = 0
 someMax = 22
