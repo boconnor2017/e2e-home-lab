@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Loopers
 someCounter = 1
 someMax = 22
