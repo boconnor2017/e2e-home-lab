@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # These are some comments
 theTruth = True
 theLiars = False
