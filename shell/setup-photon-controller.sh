@@ -69,8 +69,11 @@ echo ""
 echo ""
 echo ""
 echo "# Calling Python Script: test - get control VM information from vSphere"
-python3 /usr/local/e2e-home-lab/python/get-vm-config.py $nesxi_connect_esxi_host $nesxi_connect_esxi_pass 172.16.0.23
+cd /usr/local/e2e-home-lab/python/
+#python3 get-vm-config.py 172.16.0.6 BlizzanBandits123 172.16.0.23
+python3 get-vm-config.py $nesxi_connect_esxi_host $nesxi_connect_esxi_pass 172.16.0.23
 echo ""
 echo ""
 echo ""
 echo "E2E Lab Build Completed!!"
+
