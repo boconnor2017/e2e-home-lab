@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import os
 
 # Create a file
