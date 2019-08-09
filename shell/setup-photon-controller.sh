@@ -44,6 +44,8 @@ echo "# Installing Python"
 cd /usr/local/e2e-home-lab
 yum -y install python3 python-pip
 echo ""
+python3 --version
+echo ""
 echo "# Installing pyvmomi packages"
 pip install pyvmomi
 pip install ndg-httpsclient
