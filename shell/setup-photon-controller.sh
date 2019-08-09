@@ -70,6 +70,12 @@ echo "# # # # # # # # # # # # # # # # # # # # # # # # # # # #"
 echo ""
 echo ""
 echo ""
+echo "# Pulling pyvmomi-community-samples from github"
+cd /usr/local/e2e-home-lab/python/
+git clone https://github.com/vmware/pyvmomi-community-samples.git
+echo ""
+echo ""
+echo ""
 echo "# Calling Python Script: test - get control VM information from vSphere"
 cd /usr/local/e2e-home-lab/python/
 e2eControlLocalIP="$(ifconfig | grep -A 1 'eth0' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)"
