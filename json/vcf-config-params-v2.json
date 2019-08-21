@@ -1,0 +1,284 @@
+# *******************      V C F - E M S  -  M a n a g e m e n t   W o r k l o a d   D o m a i n       *******************
+workflowName.vcf-ems=workflowconfig/workflowspec-ems.json
+CeipEnabled=false
+workflowVersion.vcf-ems=3.8.0
+
+# ******************* L I C E N S E    K E Y S *******************
+# This subscription license is used for ESX, VC, VSAN, NSX, SDDC Manager when supplied
+cloud-subscription-license@key=
+# This license is applied to ESX hosts, SRM
+vcloud-suite-license@key=H422J-LY14H-D8989-087H0-A4KN2
+# This license is applied to management VCenter
+mgmt-vcenter-6-license@key=4J4C3-XC25M-R8E9A-0V2A6-AH0K0
+# This license is applied to compute VCenter
+nsx-license@key=H469L-VLL9M-W8J81-0UEAH-3NH5H
+vsan-license@key=HJ43M-QJ0D0-W8HA8-03E2M-0410N
+log-insight-license@key=5J69N-LA1E0-68RA9-0RFR4-ADFM4
+sddc-manager-license@key=
+
+# ******************* E X T E R N A L    I N F R A S T R U C T U R E    C O M P O N E N T S *******************
+# NTP server to configure for the deployed products. This should match the root Active Directory server if not deploying with an external AD.
+ntp-server@address=pool.ntp.org
+remote-site-ntp-server@address=
+
+# DNS Zones
+ldapADIdentitySource.domainName=e2e.local
+ldapADIdentitySource.subDomainPrefix=e2e.local
+
+# Site Name to be used for vSphere Single-Sign-on in mgmt and comp
+sso-site-name@value=vcf.local
+
+# Default Portgroup for VM Deployments
+default-network-name=VM Network
+
+
+# ******************* S D D C    M A N A G E R  *******************
+# Default credentials for SDDC Manager 
+sddc-manager-root-credentials=VMware1!
+sddc-manager-superuser-credentials=VMware1!
+sddc-manager-restapi-user-credentials=VMware1!
+#REF!
+#REF!
+
+# SDDC Manager Appliance
+sddcManagerIp.Address=172.16.10.6
+sddcManagerIp.netmask=255.255.255.0
+sddcManager-deployment-vmname=e2e-sddc-manager
+sddcManager-HostPoolName=e2e01-networkpool
+
+
+# ******************* S D D C    I N F R A S T R U C T U R E *******************
+# Default credentials for all ESXi servers, all installations must have the same user name and password.
+esxi.username=root
+esxi.password=
+
+# vCenter OS credentials (for the root user)
+vcenter-root-credentials@password=
+# vCenter product credentials (for the Administrator@vsphere.local user)
+vcenter-admin-credentials@password=
+
+# NSX product credentials (for the admin user)
+nsx-admin-credentials@password=
+nsx-edge-cli-credentials@password=nsx@VMware1!
+nsx-cli-privilege-credentials@password=
+
+# Physical NIC name which will be used when the hosts are attached to vDS
+physical-nic-dedicated-to-mgmt-dvs@value=vmnic1
+# VM Kernel Adaptors migrated to vDS
+vm-kernel-adapter-management-name@value=vmk0
+# Name of vSphere Standard Switch to be migrated. The other standard switches are left intact.
+#If no value is provided, then a single standard switch is expected on each host
+management-hosts-vss-name@value=vSwitch0
+management-hosts-vmnic=vmnic0
+
+# VSAN datastores names
+management-vsan-datastore-name@value=e2e01-m01-vsan
+# Enable vSAN Deduplication and Compression
+enableVsanDeduplication=false
+
+# ESXi Security Thumbprints
+skipThumbprintValidation=true
+# SSH Thumbprints
+esxi.mgmt-1.sshThumbprint=
+esxi.mgmt-2.sshThumbprint=
+esxi.mgmt-3.sshThumbprint=
+esxi.mgmt-4.sshThumbprint=
+# SSL Thumbprints
+esxi.mgmt-1.sslThumbprint=
+esxi.mgmt-2.sslThumbprint=
+esxi.mgmt-3.sslThumbprint=
+esxi.mgmt-4.sslThumbprint=
+
+# Hosts needed for the management cluster, this is where we deploy all the solutions. Up to 8 hosts, 2 is the minimum.
+esxi.mgmt-1.address=172.16.10.10
+esxi.mgmt-1.hostname=nesxi01.e2e.local
+esxi.mgmt-2.address=172.16.10.11
+esxi.mgmt-2.hostname=nesxi02.e2e.local
+esxi.mgmt-3.address=172.16.10.12
+esxi.mgmt-3.hostname=nesxi03.e2e.local
+esxi.mgmt-4.address=172.16.10.13
+esxi.mgmt-4.hostname=nesxi04.e2e.local
+esxi.mgmt-5.address=
+esxi.mgmt-5.hostname=
+esxi.mgmt-6.address=
+esxi.mgmt-6.hostname=
+esxi.mgmt-7.address=
+esxi.mgmt-7.hostname=
+esxi.mgmt-8.address=
+esxi.mgmt-8.hostname=
+#Network settings and static IPs for vMotion VMKernel DV portgroups
+mgmtVmotionNetwork.cidrNotation=172.16.11.0/24
+mgmtVmotionNetwork.gateway=172.16.11.1
+#Network settings and static IPs for VSAN VMKernel DV portgroups
+mgmtVsanNetwork.cidrNotation=172.16.12.0/24
+mgmtVsanNetwork.gateway=172.16.12.1
+
+# VTEP network for Management NSX
+vtepManagementNetwork.gateway=
+vtepManagementNetwork.primaryDns=172.16.0.9
+vtepManagementNetwork.secondaryDns=8.8.8.8
+vtepManagementNetwork.searchDomain=e2e.local
+vtepManagementNetwork.cidrNotation=
+
+# IP pool on the Management VTEP network
+nsx-management-vtep-ip-pool.startAddress=
+nsx-management-vtep-ip-pool.endAddress=
+
+# Segment ID ranges (Management NSX)
+mgmt-nsx-segment-id-range@rangeStart=5000
+mgmt-nsx-segment-id-range@rangeEnd=5200
+
+# Multicast address ranges (Management NSX)
+nsx-mgmt-multicast-address-range@rangeStartIp=239.1.0.0
+nsx-mgmt-multicast-address-range@rangeEndIp=239.1.255.255
+
+# Datacenter/cluster names (if not specified, the default values will be used)
+mgmt-datacenter-name=e2e01-m01-dc
+management-cluster-name=e2e01-m01-mgmt01
+
+#EVC cluster mode. If not specified, EVC will be disabled on all clusters. Allowed values are:
+# - "intel-merom", "intel-penryn", "intel-nehalem", "intel-westmere", "intel-sandybridge", "intel-ivybridge", "intel-haswell",
+# - "amd-rev-e", "amd-rev-f", "amd-greyhound-no3dnow", "amd-greyhound", "amd-bulldozer", "amd-piledriver"
+evc-mode-management-cluster@value=
+
+# Host Profile Names (2 POD Only)
+management-host-profile-name@value=e2e01-w01-user-edge
+
+# Folder Names Mgmt Cluster - Automatically formulated in XLS using sso-site-name@value= + static values
+mgmt-vm-folder-name@value=vcf.local-m01fd-mgmt
+nsx-vm-folder-name@value=vcf.local-m01fd-nsx
+availability-vm-folder-name@value=vcf.local-m01fd-bcdr
+vra-vm-folder-name@value=vcf.local-m01fd-vra
+vra-ias-vm-folder-name@value=vcf.local-m01fd-vraias
+vrops-vm-folder-name@value=vcf.local-m01fd-vrops
+vrops-rc-vm-folder-name@value=vcf.local-m01fd-vropsrc
+vrli-vm-folder-name@value=vcf.local-m01fd-vrli
+
+# vSphere Resource Pools
+vsphere-resource-pools[1]=e2e01-w01-sddc-mgmt
+vsphere-resource-pools[2]=e2e01-w01-sddc-edge
+vsphere-resource-pools[3]=e2e01-w01-user-edge
+vsphere-resource-pools[4]=e2e01-w01-user-vm
+
+# Distributed Virtual Switch Names and Portgroups
+vds-management-initial-configuration@dvSwitchName=e2e01-m01-vds
+# Management vDS Portgroup Naming
+vds-management-initial-configuration@dvPortGroups[1].name=SDDC-DPortGroup-Mgmt
+vds-management-initial-configuration@dvPortGroups[2].name=SDDC-DPortGroup-VSAN 
+vds-management-initial-configuration@dvPortGroups[3].name=SDDC-DPortGroup-vMotion
+
+# Management network settings
+managementNetwork.gateway=172.16.10.1
+managementNetwork.primaryDns=172.16.0.9
+managementNetwork.secondaryDns=8.8.8.8
+managementNetwork.searchDomain=e2e.local
+managementNetwork.cidrNotation=172.16.10.0/24
+
+# IP pools on the main network
+nsx-controllers-ip-pool.startAddress=172.16.10.118
+nsx-controllers-ip-pool.endAddress=172.16.10.120
+
+# NSX Controller Names
+nsxControllers.mgmt=vcf.localm01nsxc0%s
+
+# Network VLAN ID Configuration
+# Management Portgroup - VLAN Settings
+vlan-mgmt-management.vlanId=1611
+# vMotion Portgroup  - VLAN Settings
+vlan-management-vmotion.vlanId=1612
+# VSAN Portgroup  - VLAN Settings
+vlan-management-vsan.vlanId=1613
+# VXLAN Portgroup - VLAN Settings
+vlan-management-vxlan.vlanId=1614
+
+# Network IP Inclusion Ranges
+inclusion-range-start-vmotion01=172.16.11.10
+inclusion-range-end-vmotion01=172.16.11.100
+inclusion-range-start-vmotion02=
+inclusion-range-end-vmotion02=
+inclusion-ips-vmotion=
+inclusion-range-start-vsan01=172.16.12.10
+inclusion-range-end-vsan01=172.16.12.100
+inclusion-range-start-vsan02=
+inclusion-range-end-vsan02=
+inclusion-ips-vsan=
+
+# VLAN MTU configuration
+# Management Portgroup - MTU Settings
+vlan-mgmt-management-mtu@mtu=9000
+# Vmotion MTU
+vlan-management-vmotion-mtu@mtu=9000
+# vSAN MTU
+vlan-management-vsan-mtu@mtu=9000
+# VDS MTU - Used for VDS, VTEP, ESGs
+vds-mtu@mtu=9000
+# DVS MTU
+dvs-mtu@mtu=9000
+
+# Static IPs on the management network
+vcenterManagementIp.address=172.16.10.62
+vcenterManagementPscIp1.address=172.16.10.61
+vcenterComputePscIp1.address=172.16.10.63
+nsxManagementIp.address=172.16.10.65
+
+# VM Names for management products
+vcenter-mgmt-deployment-vmname=e2e01m01vc01
+psc-vcenter-mgmt-deployment-vmname=e2e01m01psc01
+nsx-mgmt-deployment-vmname=e2e01m01nsx01
+psc-vcenter-compute-deployment-vmname=e2e01w01psc01
+
+# Resource Pools for Shared Edge and Compute Cluster
+sddc-edge-resource-pool@resourcePoolName=vcf.local-w01rp-sddc-edge
+user-edge-resource-pool@resourcePoolName=vcf.local-w01rp-user-edge
+user-vm-resource-pool@resourcePoolName=vcf.local-w01rp-vm-edge
+
+
+# ******************** vRealize Log Insight ********************
+# Log Insight - Static IPs on the RegionA VXLAN
+logInsightMasterIp.address=172.16.10.15
+logInsightWorker1Ip.address=172.16.10.16
+logInsightWorker2Ip.address=172.16.10.17
+logInsightLoadBalancedIp.address=172.16.10.14
+#Log Insight - VM Names
+logInsight-master-deployment-vmname=e2e01vrli01a
+logInsight-worker-1-deployment-vmname=e2e01vrli01b
+logInsight-worker-2-deployment-vmname=e2e01vrli01c
+
+# LogInsight "admin" password
+log-insight-admin-credentials@password=VMware1!
+# LogInsight "root" password
+log-insight-root-credentials@password=VMware1!
+
+
+# *******************  D N S   V A L I D A T I O N  *******************
+# Core
+local-dns-records@records['vcenterManagementPscIp1']=e2e01m01psc01
+local-dns-records@records['vcenterManagementIp']=e2e01m01vc01
+local-dns-records@records['vcenterComputePscIp1']=e2e01w01psc01
+local-dns-records@records['nsxManagementIp']=e2e01m01nsx01
+root-dns-records@zoneName=e2e.local
+local-dns-records@zoneName=e2e.local
+
+# Operations
+local-dns-records@records['logInsightLoadBalancedIp']=e2e01vrli01
+local-dns-records@records['logInsightMasterIp']=e2e01vrli01a
+local-dns-records@records['logInsightWorker1Ip']=e2e01vrli01b
+local-dns-records@records['logInsightWorker2Ip']=e2e01vrli01c
+
+
+# *******************  R E M O T E    S P E C *******************
+# Join existing Platform Services Controller SSO Domain from Region A
+region-a-sso-join=No
+region-a-psc-mgmt.address=
+region-a-vc-psc-username=
+region-a-vc-psc-password=
+
+
+# *******************  R U N    P A R A M E T E R S *******************
+#  VMs/RESOURCES SIZES 
+# VCenter sizes - valid values are "tiny", "small", "medium", "large", "xlarge"
+vcenter-mgmt-deployment@deploymentModel=small
+# LogInsight Virtual Appliance Size - valid values are xsmall, small, medium, large
+logInsight-deployment@deploymentModel=small
+
+# *******************  E N D   O F   F I L E  *******************
