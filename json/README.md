@@ -1,6 +1,6 @@
 # How to Generate JSON file from VCF Parameters Spreadsheet
 
-Login to Cloudbuilder using `root` password. 
+Login to Cloudbuilder CLI using `root` credentials. 
 Create directory `/usr/local/pso/`. 
 Copy `vcf-ems-deployment-parameter_x.x.x.xlsx` to /usr/local/pso using SFTP.
 Copy shell script below to /usr/local/pso/
@@ -28,3 +28,11 @@ echo ""
 echo ""
 ls -l
 ```
+
+# Upload JSON to CloudBuilder
+Using SFTP client (FileZilla or WinSCP) copy `/usr/local/pso/vcf-ems.json` to a local folder.
+Login to CloudBuilder UI using `admin` credentials.
+Upload `vcf-ems.json` to the Configuration File page.
+Click Validate.
+Using a text editor (like Sublime or Notepad) fix validation errors directly in the JSON file. 
+Upload changes, re-validate, and repeat until all validation errors are resolved. 
