@@ -9,6 +9,7 @@ Disclaimer: this solution is not a validated or copywrite solution from VMWare.
 How to use: Edit the values and run this script against a DNS server to automatically create necessary
             DNS entries for VMWare Cloud Foundation. The values should be based on completed information
             in the CloudBuilder spreadsheet. 
+#>
 
 # E2E Lab DNS Entries 172.16.0.0/24 subnet
 # 172.16.0.1: DFGW
