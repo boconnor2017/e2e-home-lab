@@ -11,7 +11,7 @@ How to use: Edit the values and run this script against a DNS server to automati
             in the CloudBuilder spreadsheet. 
 #>
 
- E2E Lab DNS Entries 172.16.0.0/24 subnet
+# E2E Lab DNS Entries 172.16.0.0/24 subnet
 Remove-DnsServerResourceRecord -ZoneName "e2e.local" -Name "e2e-control" -RRType "A" -Force
 Remove-DnsServerResourceRecord -ZoneName "e2e.local" -Name "esxi01" -RRType "A" -Force
 Remove-DnsServerResourceRecord -ZoneName "e2e.local" -Name "esxi02" -RRType "A" -Force
