@@ -1,0 +1,32 @@
+{
+    "hostsSpec": [
+        {
+            "hostfqdn": "e2e-nesxi05",
+            "username": "root",
+            "storageType": "VSAN",
+            "password": "VMware1!",
+            "networkPoolName": "e2e01-networkpool"
+        },
+        {
+            "hostfqdn": "e2e-nesxi06",
+            "username": "root",
+            "storageType": "VSAN",
+            "password": "VMware1!",
+            "networkPoolName": "e2e01-networkpool"
+        },
+        {
+            "hostfqdn": "e2e-nesxi07",
+            "username": "root",
+            "storageType": "VSAN",
+            "password": "VMware1!",
+            "networkPoolName": "e2e01-networkpool"
+        },  
+        {
+            "hostfqdn": "e2e-nesxi08",
+            "username": "root",
+            "storageType": "VSAN",
+            "password": "VMware1!",
+            "networkPoolName": "e2e01-networkpool"
+        }  
+    ]
+}
