@@ -1,0 +1,30 @@
+[
+  {
+    "172.16.10.100":
+      {
+        "root_user": "root",
+        "root_password": "VMware1!"
+      }
+  },
+  {
+    "172.16.10.101":
+      {
+        "root_user": "root",
+        "root_password": "VMware1!"
+      }
+  },
+  {
+    "172.16.10.102":
+      {
+        "root_user": "root",
+        "root_password": "VMware1!"
+      }
+  },
+  {
+    "172.16.10.103":
+      {
+        "root_user": "root",
+        "root_password": "VMware1!"
+      }
+  },  
+]
