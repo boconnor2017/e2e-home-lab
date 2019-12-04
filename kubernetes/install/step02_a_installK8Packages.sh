@@ -1,1 +1,1 @@
-yum install -y kubelet kubeadm kubectl
+yum install -y kubelet kubeadm kubectl docker
