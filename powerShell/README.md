@@ -18,11 +18,29 @@ PS /usr/local/e2e-home-lab>
 
 Install PowerCLI
 ```
-PS /usr/local> Install-Module -Name VMware.PowerCLI
+PS /usr/local/e2e-home-lab> Install-Module -Name VMware.PowerCLI
 
 Untrusted repository
 You are installing the modules from an untrusted repository. If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet.
 Are you sure you want to install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
-PS /usr/local>
+PS /usr/local/e2e-home-lab>
+```
+
+Disable SSL certificate validation
+```
+PS /usr/local/e2e-home-lab> Set-PowerCLIConfiguration -InvalidCertificateAction Ignore
+
+Perform operation?
+Performing operation 'Update PowerCLI configuration.'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+
+Scope    ProxyPolicy     DefaultVIServerMode InvalidCertificateAction  DisplayDeprecationWarnings WebOperationTimeout
+                                                                                                  Seconds
+-----    -----------     ------------------- ------------------------  -------------------------- -------------------
+Session  UseSystemProxy  Multiple            Ignore                    True                       300
+User                                         Ignore
+AllUsers
+
+PS /usr/local/e2e-home-lab>
 ```
