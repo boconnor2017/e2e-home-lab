@@ -1,4 +1,4 @@
-# Getting Started with PowerShell on Photon
+# Getting Started with PowerCLI on Photon
 Install powershell
 ```
 tdnf install powershell
@@ -14,4 +14,15 @@ https://aka.ms/pscore6-docs
 Type 'help' to get help.
 
 PS /usr/local/e2e-home-lab>
+```
+
+Install PowerCLI
+```
+PS /usr/local> Install-Module -Name VMware.PowerCLI
+
+Untrusted repository
+You are installing the modules from an untrusted repository. If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet.
+Are you sure you want to install the modules from 'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+PS /usr/local>
 ```
